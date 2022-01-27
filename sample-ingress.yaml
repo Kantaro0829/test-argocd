@@ -10,7 +10,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /nginx/123
+      - path: /test
         pathType: Prefix
         backend:
             serviceName: nginx-service
