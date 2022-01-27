@@ -10,11 +10,11 @@ spec:
   rules:
   - http:
       paths:
-      - path: /nginx
-        pathType: Prefix
-        backend:
-            serviceName: nginx-service
-            servicePort: 80
+        #- path: /nginx
+        #pathType: Prefix
+        #backend:
+        #serviceName: nginx-service
+        #servicePort: 80
       - path: /apache
         pathType: Prefix
         backend:
