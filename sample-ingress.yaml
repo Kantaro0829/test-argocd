@@ -1,4 +1,27 @@
-apiVersion: extensions/v1beta1
+# apiVersion: extensions/v1beta1
+# kind: Ingress
+# metadata:
+#   name: sample-ingress
+#   labels:
+#       name: sample-ingress
+#   annotations:
+#     nginx.ingress.kubernetes.io/rewrite-target: /$2
+# spec:
+#   rules:
+#   - http:
+#       paths:
+#       - path: /nginx
+#         pathType: Prefix
+#         backend:
+#           serviceName: nginx-service
+#           servicePort: 80
+#       - path: /nginx/apache
+#         pathType: Prefix
+#         backend:
+#           serviceName: apache-service
+#           servicePort: 80
+
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: sample-ingress
@@ -13,10 +36,14 @@ spec:
       - path: /nginx
         pathType: Prefix
         backend:
-          serviceName: nginx-service
-          servicePort: 80
+          service:
+            name: nginx-service
+            port:
+              number: 80
       - path: /nginx/apache
         pathType: Prefix
         backend:
-          serviceName: apache-service
-          servicePort: 80
+          service:
+            name: apache-service
+            port:
+              number: 80
