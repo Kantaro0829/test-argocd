@@ -13,5 +13,5 @@ Microk8sとArgoCDを用いたGitOps
 - ArgoCD 初期ユーザ名  
 `admin`  
 - Argocdサーバのアドレス取得  
-'sudo microk8s kubectl get all -n argocd'  
+`sudo microk8s kubectl get all -n argocd`  
 
