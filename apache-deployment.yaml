@@ -13,10 +13,11 @@ spec:
     spec:
       containers:
       - name: apache
-        image: httpd
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+        # image: httpd
+        # resources:
+        #   limits:
+        #     memory: "128Mi"
+        #     cpu: "500m"
+        image: 2190431/test-microk8s-service2
         ports:
         - containerPort: 80
