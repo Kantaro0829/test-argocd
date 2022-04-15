@@ -7,3 +7,8 @@ Microk8sとArgoCDを用いたGitOps
 - ArgoCD
 > https://argo-cd.readthedocs.io/en/stable/getting_started/
 
+### memo
+- ArgoCD サーバの初期パスワード取得コマンド  
+` sudo microk8s kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d`
+- ArgoCD 初期ユーザ名
+`admin`
