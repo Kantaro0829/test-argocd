@@ -40,7 +40,7 @@ spec:
             name: nginx-service
             port:
               number: 80
-      - path: /nginx/apache
+      - path: /apache
         pathType: Prefix
         backend:
           service:
