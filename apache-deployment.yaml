@@ -18,6 +18,6 @@ spec:
         #   limits:
         #     memory: "128Mi"
         #     cpu: "500m"
-        image: 2190431/test-microk8s-service2:30
+        image: 2190431/test-microk8s-service2:33
         ports:
         - containerPort: 80
