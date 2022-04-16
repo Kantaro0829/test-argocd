@@ -14,6 +14,6 @@ spec:
       containers:
       - name: nginx
         #image: nginx
-        image: 2190431/test-microk8s-service1:33
+        image: 2190431/test-microk8s-service1:34
         ports:
         - containerPort: 80
