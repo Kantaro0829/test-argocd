@@ -14,4 +14,5 @@ Microk8sとArgoCDを用いたGitOps
 `admin`  
 - Argocdサーバのアドレス取得  
 `sudo microk8s kubectl get all -n argocd`  
-
+- mysql 接続確認  
+`sudo microk8s kubectl run -it --rm --image=mysql:5.6 --restart=Never mysql-client -- mysql -h mysql -ppassword`
