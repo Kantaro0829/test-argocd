@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: nginx
 spec:
+  #for deleting old replicatset
+  revisionHistoryLimit: 0 # Default to 10 if not specified
   selector:
     matchLabels:
       app: nginx
